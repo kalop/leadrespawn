@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LeadRespawn Panel</title>
+</head>
+<body>
+  <h1>Eventos encolados</h1>
+  <ul>
+    {% for item in queue %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
