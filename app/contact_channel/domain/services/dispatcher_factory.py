@@ -1,3 +1,4 @@
+from app.contact_channel.domain.services.dispatcher import Dispatcher
 from app.contact_channel.infrastructure.whatsapp.twilio_adapter import TwilioWhatsAppDispatcher
 
 class DispatcherFactory:
@@ -12,6 +13,6 @@ class DispatcherFactory:
         return self.dispatchers.get(channel)
 
     @staticmethod
-    def get_dispatcher(channel: str):
+    def get_dispatcher(channel: str) -> Dispatcher:
         dispatcher_factory = DispatcherFactory()
         return dispatcher_factory.get(channel)

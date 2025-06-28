@@ -2,8 +2,9 @@
 
 ## Backend Dev
 ```
-pip install -e 
+pip install -r app/requirements.txt
 uvicorn app.main:app --reload
+docker run -d --name leadrespawn-redis -p 6379:6379 redis:latest
 python -m app.rq_worker generic
 ```
 Test call
