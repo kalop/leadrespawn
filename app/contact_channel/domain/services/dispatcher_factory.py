@@ -1,11 +1,12 @@
 from app.contact_channel.domain.services.dispatcher import Dispatcher
-from app.contact_channel.infrastructure.whatsapp.twilio_adapter import TwilioWhatsAppDispatcher
+from app.contact_channel.infrastructure.sms.twilio_sms_adapter import TwilioSMSDispatcher
+from app.contact_channel.infrastructure.whatsapp.twilio_whatsapp_adapter import TwilioWhatsAppDispatcher
 
 class DispatcherFactory:
     def __init__(self):
         self.dispatchers = {
             'whatsapp': TwilioWhatsAppDispatcher(),
-            # 'sms': TwilioSMSDispatcher(),
+            'sms': TwilioSMSDispatcher(),
             # 'email': EmailDispatcher(),
         }
 

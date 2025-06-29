@@ -17,6 +17,9 @@ class Settings:
     WHATSAPP_FROM: str = os.getenv("WHATSAPP_FROM", "")
     WHATSAPP_TO: str = os.getenv("WHATSAPP_TO", "")
 
+    SMS_FROM: str = os.getenv("SMS_FROM", "")
+
+
     # Metta
     WHATSAPP_ACCESS_TOKEN = os.getenv("WHATSAPP_ACCESS_TOKEN", "")
     WHATSAPP_PHONE_NUMBER_ID = os.getenv("WHATSAPP_PHONE_NUMBER_ID ", "")
